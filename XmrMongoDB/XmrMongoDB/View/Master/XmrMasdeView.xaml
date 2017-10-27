@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XmrMongoDB.View.XmrMasdeView"
+             xmlns:viewmodel="clr-namespace:XmrMongoDB.ViewModel"
+             xmlns:pages="clr-namespace:XmrMongoDB.View">
+  <MasterDetailPage.Master>
+        <pages:XmrMasdeViewMaster x:Name="MasterPage" Title="Mstr" >
+            <!--<pages:XmrMasdeViewMaster.BindingContext>
+                <viewmodel:XmrMasterViewModel/>
+            </pages:XmrMasdeViewMaster.BindingContext>
+            <StackLayout Orientation="Vertical">
+                <Button x:Name="BtnPageOne" WidthRequest="20" Command="OpenPageOneCommand"/>
+            </StackLayout>-->
+        </pages:XmrMasdeViewMaster>
+    </MasterDetailPage.Master>
+  <MasterDetailPage.Detail>
+    <NavigationPage>
+      <x:Arguments>
+        <pages:XmrContactViewDetail >
+                  
+        </pages:XmrContactViewDetail>
+      </x:Arguments>
+    </NavigationPage>
+  </MasterDetailPage.Detail>
+</MasterDetailPage>
